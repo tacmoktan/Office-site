@@ -14,16 +14,18 @@ $contentFont : 'Ubuntu', sans-serif;
 
 
 header{
+    position: fixed;
+    top: 0;
+    width: 100%;
     display:flex;
     justify-content: center;
 
     #navbar{
+        background:transparent;
         display:flex;
         width:87%;
         min-width:460px;
         padding:10px 0;
-        position:fixed;
-        top:0;
 
         #logo{
             margin-right:auto;
@@ -39,7 +41,7 @@ header{
             justify-content: space-around;
             align-items: center;
             width:40%;
-            a{
+            a, .active{
                 text-decoration:none;
                 color:white;
                 font-family:$navFont;
@@ -61,6 +63,14 @@ header{
                     }
                 }
             }
+
+            .active{
+                &:after{
+                    width:100%;
+                }
+
+            }
+            
         }
     }
 }

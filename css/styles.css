@@ -6,6 +6,9 @@
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,14 +18,13 @@ header {
 }
 
 header #navbar {
+  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 87%;
   min-width: 460px;
   padding: 10px 0;
-  position: fixed;
-  top: 0;
 }
 
 header #navbar #logo {
@@ -47,7 +49,7 @@ header #navbar #nav-links {
   width: 40%;
 }
 
-header #navbar #nav-links a {
+header #navbar #nav-links a, header #navbar #nav-links .active {
   text-decoration: none;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
@@ -55,7 +57,7 @@ header #navbar #nav-links a {
   font-size: 1.1em;
 }
 
-header #navbar #nav-links a:after {
+header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
   content: "";
   display: block;
   background: #6195ff;
@@ -63,10 +65,14 @@ header #navbar #nav-links a:after {
   height: 2px;
 }
 
-header #navbar #nav-links a:hover:after {
+header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover:after {
   width: 100%;
   -webkit-transition: width 0.2s ease-in;
   transition: width 0.2s ease-in;
+}
+
+header #navbar #nav-links .active:after {
+  width: 100%;
 }
 
 section#home {
