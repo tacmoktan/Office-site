@@ -1,0 +1,75 @@
+//variables
+$primary:#6195ff;
+$secondary:#fc3b06;
+
+$navFont:'Roboto Condensed', sans-serif;
+$contentFont : 'Ubuntu', sans-serif;
+
+*{
+    padding:0;
+    margin:0;
+    scroll-behavior:smooth;
+    font-family:$contentFont;
+}
+
+
+header{
+    display:flex;
+    justify-content: center;
+
+    #navbar{
+        display:flex;
+        width:87%;
+        min-width:460px;
+        padding:10px 0;
+        position:fixed;
+        top:0;
+
+        #logo{
+            margin-right:auto;
+            img{
+                max-height:100px;
+            }
+        }
+        
+        #nav-links{
+            display: flex;
+            font-size:1em;
+            font-weight:bold;
+            justify-content: space-around;
+            align-items: center;
+            width:40%;
+            a{
+                text-decoration:none;
+                color:white;
+                font-family:$navFont;
+                text-transform: uppercase;
+                font-size: 1.1em;
+
+                &:after{
+                    content:"";
+                    display:block;
+                    background:$primary;
+                    width:0%;
+                    height:2px;
+                }
+
+                &:hover{
+                    &:after{
+                        width:100%;
+                        transition:width 0.2s ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#home{
+    height:100vh;
+    background:url('../assets/bg1_darken.jpg');
+    background-color:#6195ff00;
+    background-blend-mode:screen;
+    background-size:cover;
+    background-position:center;
+}

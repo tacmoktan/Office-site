@@ -1,1 +1,80 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 87%;
+  min-width: 460px;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+}
+
+header #navbar #logo {
+  margin-right: auto;
+}
+
+header #navbar #logo img {
+  max-height: 100px;
+}
+
+header #navbar #nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1em;
+  font-weight: bold;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+}
+
+header #navbar #nav-links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+header #navbar #nav-links a:after {
+  content: "";
+  display: block;
+  background: #6195ff;
+  width: 0%;
+  height: 2px;
+}
+
+header #navbar #nav-links a:hover:after {
+  width: 100%;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+section#home {
+  height: 100vh;
+  background: url("../assets/bg1_darken.jpg");
+  background-color: #6195ff00;
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=styles.css.map */
