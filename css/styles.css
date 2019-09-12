@@ -70,13 +70,13 @@ header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
   height: 3px;
   border-top-right-radius: 300px;
   border-top-left-radius: 300px;
+  -webkit-transition: width 0.2s ease-in, bottom 0.2s linear;
+  transition: width 0.2s ease-in, bottom 0.2s linear;
 }
 
 header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover:after {
   width: 100%;
   bottom: -10px;
-  -webkit-transition: width 0.2s ease-in, bottom 0.2s linear;
-  transition: width 0.2s ease-in, bottom 0.2s linear;
 }
 
 header #navbar #nav-links .active:after {
@@ -85,6 +85,16 @@ header #navbar #nav-links .active:after {
 }
 
 section#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 80px;
   margin-bottom: -80px;
   height: 100vh;
@@ -97,8 +107,8 @@ section#home .header {
   background-attachment: fixed;
   background-color: #6195ff3d;
   background-blend-mode: screen;
+  background-size: cover;
   height: 300px;
-  padding: 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,16 +128,21 @@ section#home .header h1 {
   text-transform: uppercase;
 }
 
-section#home .header h1 #name1 {
-  color: #fc3b06;
+section#home .header h1 .name1 {
+  color: #fc5324;
 }
 
-section#home .header h1 #name2 {
-  color: #6195ff;
+section#home .header h1 .name2 {
+  color: #80aaff;
+}
+
+@media screen and (max-width: 760px) {
+  section#home .header {
+    height: 200px;
+  }
 }
 
 section#about {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,8 +165,8 @@ section#about .header {
   background-attachment: fixed;
   background-color: #6195ff3d;
   background-blend-mode: screen;
+  background-size: cover;
   height: 300px;
-  padding: 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,12 +186,18 @@ section#about .header h1 {
   text-transform: uppercase;
 }
 
-section#about .header h1 #name1 {
-  color: #fc3b06;
+section#about .header h1 .name1 {
+  color: #fc5324;
 }
 
-section#about .header h1 #name2 {
-  color: #6195ff;
+section#about .header h1 .name2 {
+  color: #80aaff;
+}
+
+@media screen and (max-width: 760px) {
+  section#about .header {
+    height: 200px;
+  }
 }
 
 section#about #about-content {
@@ -192,7 +213,7 @@ section#about #about-content {
   padding: 60px 0;
 }
 
-section#about .content {
+section#about #about-content .content {
   background: white;
   width: calc(45%/3);
   text-align: center;
@@ -206,7 +227,7 @@ section#about .content {
   color: #000000d1;
 }
 
-section#about .content .icon-container {
+section#about #about-content .content .icon-container {
   padding: 15px;
   font-size: 1.5em;
   position: absolute;
@@ -218,21 +239,160 @@ section#about .content .icon-container {
   -webkit-box-shadow: 0 0 10px #6195ff;
           box-shadow: 0 0 10px #6195ff;
   cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
 }
 
-section#about .content .icon-container:hover {
+section#about #about-content .content .icon-container:hover {
   background: #6195ff;
 }
 
-section#about .content h1 {
-  margin: 5px 0;
+section#about #about-content .content h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 5px 0 10px 0;
 }
 
 @media screen and (max-width: 760px) {
-  section#about .content {
+  section#about #about-content .content {
     padding: 30px 10px;
     margin: 30px 10px;
     min-width: 250px;
   }
+}
+
+section#about #about-content .content h1 {
+  color: #fc3b06;
+}
+
+section#services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 80px;
+  margin-bottom: -80px;
+}
+
+section#services .header {
+  background: url("../assets/section-img/bg2.jpg");
+}
+
+section#services .header {
+  background-attachment: fixed;
+  background-color: #6195ff3d;
+  background-blend-mode: screen;
+  background-size: cover;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+section#services .header h1 {
+  color: white;
+  font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+section#services .header h1 .name1 {
+  color: #fc5324;
+}
+
+section#services .header h1 .name2 {
+  color: #80aaff;
+}
+
+@media screen and (max-width: 760px) {
+  section#services .header {
+    height: 200px;
+  }
+}
+
+section#services #service-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: whitesmoke;
+  padding: 60px 0;
+}
+
+section#services #service-content .content {
+  background: white;
+  width: calc(45%/3);
+  text-align: center;
+  line-height: 1.5;
+  min-width: 295px;
+  -webkit-box-shadow: 0 0 8px #cccccc;
+          box-shadow: 0 0 8px #cccccc;
+  padding: 30px 20px;
+  margin: 30px 20px;
+  position: relative;
+  color: #000000d1;
+}
+
+section#services #service-content .content .icon-container {
+  padding: 15px;
+  font-size: 1.5em;
+  position: absolute;
+  top: -30;
+  left: 43%;
+  background: #7ba6ff;
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px #6195ff;
+          box-shadow: 0 0 10px #6195ff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
+
+section#services #service-content .content .icon-container:hover {
+  background: #6195ff;
+}
+
+section#services #service-content .content h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 5px 0 10px 0;
+}
+
+@media screen and (max-width: 760px) {
+  section#services #service-content .content {
+    padding: 30px 10px;
+    margin: 30px 10px;
+    min-width: 250px;
+  }
+}
+
+section#services #service-content .content .icon-container {
+  background: #fd6338;
+  -webkit-box-shadow: 0 0 10px #fc3b06;
+          box-shadow: 0 0 10px #fc3b06;
+}
+
+section#services #service-content .content .icon-container:hover {
+  background: #fc3b06;
+}
+
+section#services #service-content .content h1 {
+  color: #6195ff;
 }
 /*# sourceMappingURL=styles.css.map */

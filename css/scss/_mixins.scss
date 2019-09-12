@@ -1,4 +1,8 @@
 @mixin section {
+
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
     padding-top:$paddingTop - 40;
     margin-bottom:$marginBottom + 40;
 
@@ -6,8 +10,8 @@
         background-attachment: fixed;
         background-color:$blendColor;
         background-blend-mode:screen;
+        background-size:cover;
         height:300px;
-        padding:50px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,17 +22,70 @@
             font-size:2.5em;
             font-family:$navFont;
             text-transform:uppercase;
-
-            #name1{
-                color:$secondary;
+            .name1{
+                color:lighten($secondary, 6%);
             }
 
-            #name2{
-                color:$primary;
+            .name2{
+                color:lighten($primary, 6%);
             }
+        }
+
+        @include mediaQuery($mediaQueryWidth){
+            height:200px
         }
     }
     
+}
+
+@mixin section-content{
+
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    background:whitesmoke;
+    padding:60px 0;
+
+    .content{
+        background:white;
+        width: calc(45%/3);
+        text-align: center;
+        line-height: 1.5;
+        min-width: 295px;
+        box-shadow: 0 0 8px #cccccc;
+        padding: 30px 20px;
+        margin:30px 20px;
+        position:relative;
+        color:#000000d1;
+        
+        .icon-container{
+            padding:15px;
+            font-size:1.5em;
+            position: absolute;
+            top: -30;
+            left: 43%;
+            background:lighten($primary,5%);
+            color: white;
+            border-radius:5px;
+            box-shadow:0 0 10px $primary;
+            cursor:pointer;
+            transition:background-color 0.15s ease-in;
+            &:hover{
+                background:$primary;
+            }
+        }
+
+        h1{
+            font-family:$navFont;
+            margin:5px 0 10px 0;
+        }
+
+        @include mediaQuery($mediaQueryWidth){
+            padding:30px 10px;
+            margin:30px 10px;
+            min-width:250px;
+        }
+    }
 }
 
 @mixin mediaQuery($width) {
