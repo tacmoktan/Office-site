@@ -6,6 +6,7 @@
 }
 
 header {
+  background: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -15,10 +16,11 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 header #navbar {
-  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,24 +53,30 @@ header #navbar #nav-links {
 
 header #navbar #nav-links a, header #navbar #nav-links .active {
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   font-size: 1.1em;
+  position: relative;
 }
 
 header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
   content: "";
   display: block;
   background: #6195ff;
+  position: absolute;
   width: 0%;
-  height: 2px;
+  bottom: -3px;
+  height: 3px;
+  border-top-right-radius: 300px;
+  border-top-left-radius: 300px;
 }
 
 header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover:after {
   width: 100%;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
+  bottom: -10px;
+  -webkit-transition: width 0.2s ease-in, bottom 0.2s linear;
+  transition: width 0.2s ease-in, bottom 0.2s linear;
 }
 
 header #navbar #nav-links .active:after {
@@ -76,11 +84,68 @@ header #navbar #nav-links .active:after {
 }
 
 section#home {
+  padding-top: 120px;
+  margin-bottom: -120px;
   height: 100vh;
-  background: url("../assets/bg1_darken.jpg");
-  background-color: #6195ff00;
-  background-blend-mode: screen;
+  background: url("../assets/bg1.svg");
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
+}
+
+section#home .header {
+  background-attachment: fixed;
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#home .header h1 {
+  color: white;
+  font-size: 2.5em;
+}
+
+section#about {
+  padding-top: 120px;
+  margin-bottom: -120px;
+  height: 100vh;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#about .header {
+  background-attachment: fixed;
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#about .header h1 {
+  color: white;
+  font-size: 2.5em;
+}
+
+section#about .header {
+  background: url("../assets/section-img/bg1_darken.jpg");
 }
 /*# sourceMappingURL=styles.css.map */

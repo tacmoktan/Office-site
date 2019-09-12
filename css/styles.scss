@@ -1,9 +1,5 @@
-//variables
-$primary:#6195ff;
-$secondary:#fc3b06;
-
-$navFont:'Roboto Condensed', sans-serif;
-$contentFont : 'Ubuntu', sans-serif;
+@import 'scss/_variables';
+@import 'scss/_mixins.scss';
 
 *{
     padding:0;
@@ -14,14 +10,14 @@ $contentFont : 'Ubuntu', sans-serif;
 
 
 header{
+    background:transparent;
     position: fixed;
     top: 0;
     width: 100%;
     display:flex;
     justify-content: center;
-
+    box-shadow: none;
     #navbar{
-        background:transparent;
         display:flex;
         width:87%;
         min-width:460px;
@@ -43,23 +39,29 @@ header{
             width:40%;
             a, .active{
                 text-decoration:none;
-                color:white;
+                color:black;
                 font-family:$navFont;
                 text-transform: uppercase;
                 font-size: 1.1em;
+                position:relative;
 
                 &:after{
                     content:"";
                     display:block;
                     background:$primary;
+                    position: absolute;
                     width:0%;
-                    height:2px;
+                    bottom:-3px;
+                    height:3px;
+                    border-top-right-radius: 300px;
+                    border-top-left-radius: 300px;
                 }
 
                 &:hover{
                     &:after{
                         width:100%;
-                        transition:width 0.2s ease-in;
+                        bottom:-10px;
+                        transition:width 0.2s ease-in, bottom 0.2s linear;
                     }
                 }
             }
@@ -76,10 +78,24 @@ header{
 }
 
 section#home{
+    @include section;
+
     height:100vh;
-    background:url('../assets/bg1_darken.jpg');
-    background-color:#6195ff00;
-    background-blend-mode:screen;
+    background:url('../assets/bg1.svg');
     background-size:cover;
-    background-position:center;
+    background-attachment:fixed; //parallax
+    
+}
+
+section#about{
+    @include section;
+
+    height:100vh;
+    background:white;
+    display:flex;
+    justify-content:center;
+    
+    .header{
+        background:url('../assets/section-img/bg1_darken.jpg');
+    }
 }
