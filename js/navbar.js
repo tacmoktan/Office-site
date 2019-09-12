@@ -6,7 +6,7 @@ const logoImg = document.querySelector('#logo a img');
 console.log(logoImg);
 window.onscroll = () => {
 
-    if (window.pageYOffset > 5) {
+    if (window.pageYOffset > 15) {
 
         header.style.background = "white";
         header.style.boxShadow = "0px 1px 5px black";
