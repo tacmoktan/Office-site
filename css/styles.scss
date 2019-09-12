@@ -17,6 +17,8 @@ header{
     display:flex;
     justify-content: center;
     box-shadow: none;
+    z-index:10;
+
     #navbar{
         display:flex;
         width:87%;
@@ -50,7 +52,6 @@ header{
                     display:block;
                     background:$primary;
                     position: absolute;
-                    width:0%;
                     bottom:-3px;
                     height:3px;
                     border-top-right-radius: 300px;
@@ -69,8 +70,8 @@ header{
             .active{
                 &:after{
                     width:100%;
+                    bottom:-10px;
                 }
-
             }
             
         }
@@ -88,14 +89,63 @@ section#home{
 }
 
 section#about{
-    @include section;
 
     height:100vh;
-    background:white;
     display:flex;
     justify-content:center;
-    
+    flex-direction:column;
     .header{
-        background:url('../assets/section-img/bg1_darken.jpg');
+        background-image:url('../assets/section-img/bg1_darken.jpg');
+    }
+
+    
+    @include section;
+
+    #about-content{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        background:whitesmoke;
+        padding:60px 0;
+    }
+
+    .content{
+        background:white;
+        width: calc(45%/3);
+        text-align: center;
+        line-height: 1.5;
+        min-width: 295px;
+        box-shadow: 0 0 8px #cccccc;
+        padding: 30px 20px;
+        margin:30px 20px;
+        position:relative;
+        color:#000000d1;
+        
+        .icon-container{
+            padding:15px;
+            font-size:1.5em;
+            position: absolute;
+            top: -30;
+            left: 43%;
+            background:lighten($primary,5%);
+            color: white;
+            border-radius:5px;
+            box-shadow:0 0 10px $primary;
+            cursor:pointer;
+            
+            &:hover{
+                background:$primary;
+            }
+        }
+
+        h1{
+            margin:5px 0;
+        }
+
+        @include mediaQuery($mediaQueryWidth){
+            padding:30px 10px;
+            margin:30px 10px;
+            min-width:250px;
+        }
     }
 }

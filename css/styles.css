@@ -18,6 +18,7 @@ header {
           justify-content: center;
   -webkit-box-shadow: none;
           box-shadow: none;
+  z-index: 10;
 }
 
 header #navbar {
@@ -65,7 +66,6 @@ header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
   display: block;
   background: #6195ff;
   position: absolute;
-  width: 0%;
   bottom: -3px;
   height: 3px;
   border-top-right-radius: 300px;
@@ -81,11 +81,12 @@ header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover
 
 header #navbar #nav-links .active:after {
   width: 100%;
+  bottom: -10px;
 }
 
 section#home {
-  padding-top: 120px;
-  margin-bottom: -120px;
+  padding-top: 80px;
+  margin-bottom: -80px;
   height: 100vh;
   background: url("../assets/bg1.svg");
   background-size: cover;
@@ -94,8 +95,10 @@ section#home {
 
 section#home .header {
   background-attachment: fixed;
+  background-color: #6195ff3d;
+  background-blend-mode: screen;
   height: 300px;
-  width: 100%;
+  padding: 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,30 +108,50 @@ section#home .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 section#home .header h1 {
   color: white;
   font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+section#home .header h1 #name1 {
+  color: #fc3b06;
+}
+
+section#home .header h1 #name2 {
+  color: #6195ff;
 }
 
 section#about {
-  padding-top: 120px;
-  margin-bottom: -120px;
   height: 100vh;
-  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 80px;
+  margin-bottom: -80px;
+}
+
+section#about .header {
+  background-image: url("../assets/section-img/bg1_darken.jpg");
 }
 
 section#about .header {
   background-attachment: fixed;
+  background-color: #6195ff3d;
+  background-blend-mode: screen;
   height: 300px;
-  width: 100%;
+  padding: 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,14 +161,78 @@ section#about .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 section#about .header h1 {
   color: white;
   font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
 }
 
-section#about .header {
-  background: url("../assets/section-img/bg1_darken.jpg");
+section#about .header h1 #name1 {
+  color: #fc3b06;
+}
+
+section#about .header h1 #name2 {
+  color: #6195ff;
+}
+
+section#about #about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: whitesmoke;
+  padding: 60px 0;
+}
+
+section#about .content {
+  background: white;
+  width: calc(45%/3);
+  text-align: center;
+  line-height: 1.5;
+  min-width: 295px;
+  -webkit-box-shadow: 0 0 8px #cccccc;
+          box-shadow: 0 0 8px #cccccc;
+  padding: 30px 20px;
+  margin: 30px 20px;
+  position: relative;
+  color: #000000d1;
+}
+
+section#about .content .icon-container {
+  padding: 15px;
+  font-size: 1.5em;
+  position: absolute;
+  top: -30;
+  left: 43%;
+  background: #7ba6ff;
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px #6195ff;
+          box-shadow: 0 0 10px #6195ff;
+  cursor: pointer;
+}
+
+section#about .content .icon-container:hover {
+  background: #6195ff;
+}
+
+section#about .content h1 {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 760px) {
+  section#about .content {
+    padding: 30px 10px;
+    margin: 30px 10px;
+    min-width: 250px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
