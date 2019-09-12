@@ -1,6 +1,7 @@
 //variables
 $primary:#6195ff;
 $secondary:#fc3b06;
+$blendColor:#6195ff3d;
 
 $navFont:'Roboto Condensed', sans-serif;
 $contentFont : 'Ubuntu', sans-serif;
@@ -10,3 +11,4 @@ $navbarHeight :120px;
 $paddingTop:$navbarHeight;
 $marginBottom: -$navbarHeight;
 
+$mediaQueryWidth: 760px;

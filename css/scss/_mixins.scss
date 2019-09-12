@@ -1,18 +1,39 @@
 @mixin section {
-    padding-top:$paddingTop;
-    margin-bottom:$marginBottom;
+    padding-top:$paddingTop - 40;
+    margin-bottom:$marginBottom + 40;
 
     .header{
         background-attachment: fixed;
+        background-color:$blendColor;
+        background-blend-mode:screen;
         height:300px;
-        width:100%;
+        padding:50px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
+
         h1{
             color:white;
             font-size:2.5em;
+            font-family:$navFont;
+            text-transform:uppercase;
+
+            #name1{
+                color:$secondary;
+            }
+
+            #name2{
+                color:$primary;
+            }
         }
     }
     
 }
+
+@mixin mediaQuery($width) {
+    @media screen and  (max-width:$width){
+        @content;
+    }
+}
+
