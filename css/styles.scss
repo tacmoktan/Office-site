@@ -141,6 +141,7 @@ section#services{
         min-width: 300px;
         //border: 1px solid;
         padding: 30px 20px;
+        margin-bottom:$navbarHeight - 40;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -170,9 +171,68 @@ section#services{
             }
 
             p{  
-                color:#000000ab;
+                color:$lightblack;
             }
         }
 
+    }
+}
+
+section#contact{
+
+    .header{
+        background-image:linear-gradient(-45deg, $primary, $secondary);
+    }
+    @include section;
+
+    #contact-content{
+        width: 100%;
+        background: whitesmoke;
+
+        .contact{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            margin: 70px 0;
+            div{
+                padding: 35px 20px;
+                line-height: 1.5;
+                text-align: center;
+                background: white;
+                min-width: 250px;
+                width: 20vw;
+                margin: 20px 30px;
+
+                i{
+                    font-size: 2.5em;
+                    margin-bottom:10px;
+                    color:$primary;
+                }
+
+                h3{
+                    margin:5px 0;
+                }
+
+                p{
+                    color:#000000ab;
+                }
+            }
+        }
+
+        h1{
+            font-size:2.5em;
+            font-family:$navFont;
+            width: 100%;
+            text-align: center;
+            color:$primary;
+        }
+
+        #map{
+            margin:30px 0;
+            iframe{
+                width:100%;
+                height:300px;
+            }
+        }
     }
 }

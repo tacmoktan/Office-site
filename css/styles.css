@@ -404,6 +404,7 @@ section#services #service-content .content h1 {
 section#services #why_choose_us {
   min-width: 300px;
   padding: 30px 20px;
+  margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,5 +447,122 @@ section#services #why_choose_us .feature i {
 
 section#services #why_choose_us .feature p {
   color: #000000ab;
+}
+
+section#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 80px;
+  margin-bottom: -80px;
+}
+
+section#contact .header {
+  background-image: linear-gradient(-45deg, #6195ff, #fc3b06);
+}
+
+section#contact .header {
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+section#contact .header h1 {
+  color: white;
+  font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  word-spacing: 15;
+}
+
+section#contact .header h1 .name1 {
+  color: #fc5324;
+}
+
+section#contact .header h1 .name2 {
+  color: #80aaff;
+}
+
+@media screen and (max-width: 760px) {
+  section#contact .header {
+    height: 200px;
+  }
+}
+
+section#contact #contact-content {
+  width: 100%;
+  background: whitesmoke;
+}
+
+section#contact #contact-content .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 70px 0;
+}
+
+section#contact #contact-content .contact div {
+  padding: 35px 20px;
+  line-height: 1.5;
+  text-align: center;
+  background: white;
+  min-width: 250px;
+  width: 20vw;
+  margin: 20px 30px;
+}
+
+section#contact #contact-content .contact div i {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #6195ff;
+}
+
+section#contact #contact-content .contact div h3 {
+  margin: 5px 0;
+}
+
+section#contact #contact-content .contact div p {
+  color: #000000ab;
+}
+
+section#contact #contact-content h1 {
+  font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+  text-align: center;
+  color: #6195ff;
+}
+
+section#contact #contact-content #map {
+  margin: 30px 0;
+}
+
+section#contact #contact-content #map iframe {
+  width: 100%;
+  height: 300px;
 }
 /*# sourceMappingURL=styles.css.map */
