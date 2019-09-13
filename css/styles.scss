@@ -21,8 +21,8 @@ header{
 
     #navbar{
         display:flex;
+        align-items: center;
         width:87%;
-        min-width:460px;
         padding:10px 0;
 
         #logo{
@@ -32,14 +32,15 @@ header{
             }
         }
         
-        #nav-links{
+        #nav-links {
             display: flex;
             font-size:1em;
             font-weight:bold;
             justify-content: space-around;
-            align-items: center;
             width:40%;
-            a, .active{
+            min-width:350px;
+
+            a, .active {
                 text-decoration:none;
                 color:black;
                 font-family:$navFont;
@@ -73,7 +74,50 @@ header{
                     bottom:-10px;
                 }
             }
+
+            @include mediaQuery(($mediaQueryWidth)){
+                display:none;
+            }
             
+        }
+
+        /* responsive navbar */
+        i{
+            display:none;
+            font-size:25;
+            cursor:pointer;
+            @include mediaQuery($mediaQueryWidth){
+                display:block;
+            }
+        }
+
+        #drawer{
+            
+                display:flex;
+                flex-direction: column;
+                position: absolute;
+                right: -210px;      //drawer's width 
+                top: 0;
+                height: 100vh;
+                background: $primary;
+                transition: right 0.3s ease-in;
+
+            a{
+                cursor:pointer;
+                border-bottom:1px solid;
+                font-family:$navFont;
+                text-transform:uppercase;
+                color:lighten(white, 5%);
+                text-decoration:none;
+                width: 150px;
+                text-align: center;
+                padding: 30px;
+
+                &:hover{
+                    background:darken($primary, 5%);
+                    color:darken(white, 5%);
+                }
+            }
         }
     }
 }

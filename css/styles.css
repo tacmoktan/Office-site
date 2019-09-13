@@ -25,9 +25,12 @@ header #navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 87%;
-  min-width: 460px;
   padding: 10px 0;
+  /* responsive navbar */
 }
 
 header #navbar #logo {
@@ -46,10 +49,8 @@ header #navbar #nav-links {
   font-weight: bold;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 40%;
+  min-width: 350px;
 }
 
 header #navbar #nav-links a, header #navbar #nav-links .active {
@@ -82,6 +83,58 @@ header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover
 header #navbar #nav-links .active:after {
   width: 100%;
   bottom: -10px;
+}
+
+@media screen and (max-width: 760px) {
+  header #navbar #nav-links {
+    display: none;
+  }
+}
+
+header #navbar i {
+  display: none;
+  font-size: 25;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  header #navbar i {
+    display: block;
+  }
+}
+
+header #navbar #drawer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: -210px;
+  top: 0;
+  height: 100vh;
+  background: #6195ff;
+  -webkit-transition: right 0.3s ease-in;
+  transition: right 0.3s ease-in;
+}
+
+header #navbar #drawer a {
+  cursor: pointer;
+  border-bottom: 1px solid;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  width: 150px;
+  text-align: center;
+  padding: 30px;
+}
+
+header #navbar #drawer a:hover {
+  background: #4884ff;
+  color: #f2f2f2;
 }
 
 section#home {
