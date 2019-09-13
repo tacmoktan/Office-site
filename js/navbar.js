@@ -3,7 +3,7 @@ const headerHeight = 120;
 //elements
 const header = document.querySelector('#header');
 const logoImg = document.querySelector('#logo a img');
-console.log(logoImg);
+
 window.onscroll = () => {
 
     if (window.pageYOffset > 15) {

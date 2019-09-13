@@ -92,6 +92,7 @@ section#about{
 
     .header{
         background-image:url('../assets/section-img/bg1_darken.jpg');
+        background-color:$blendColor;
     }
 
     @include section;
@@ -110,7 +111,7 @@ section#about{
 }
 
 section#services{
-    
+    background:whitesmoke;
     .header{
         background:url('../assets/section-img/bg2.jpg');
     }
@@ -134,5 +135,44 @@ section#services{
                 color:$primary;
             }
         }
+    }
+
+    #why_choose_us{
+        min-width: 300px;
+        //border: 1px solid;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.5;
+        background:white;
+        clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
+
+        h1{
+            font-size: 2.5em;
+            font-family:$navFont;
+            color:darken($primary, 5%);
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        .feature{
+            display: flex;
+            margin: 10px 0;
+
+            i{
+                color:darken($primary, 5%);
+                border: 1px solid;
+                border-radius: 50%;
+                padding: 5px;
+                margin-right: 15px;
+                height:16px;
+            }
+
+            p{  
+                color:#000000ab;
+            }
+        }
+
     }
 }

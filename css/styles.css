@@ -88,13 +88,13 @@ section#home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 80px;
   margin-bottom: -80px;
   height: 100vh;
@@ -105,9 +105,9 @@ section#home {
 
 section#home .header {
   background-attachment: fixed;
-  background-color: #6195ff3d;
   background-blend-mode: screen;
   background-size: cover;
+  width: 100%;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,6 +126,7 @@ section#home .header h1 {
   font-size: 2.5em;
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
+  word-spacing: 15;
 }
 
 section#home .header h1 .name1 {
@@ -146,26 +147,27 @@ section#about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 80px;
   margin-bottom: -80px;
 }
 
 section#about .header {
   background-image: url("../assets/section-img/bg1_darken.jpg");
+  background-color: #6195ff3d;
 }
 
 section#about .header {
   background-attachment: fixed;
-  background-color: #6195ff3d;
   background-blend-mode: screen;
   background-size: cover;
+  width: 100%;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,6 +186,7 @@ section#about .header h1 {
   font-size: 2.5em;
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
+  word-spacing: 15;
 }
 
 section#about .header h1 .name1 {
@@ -265,16 +268,17 @@ section#about #about-content .content h1 {
 }
 
 section#services {
+  background: whitesmoke;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 80px;
   margin-bottom: -80px;
 }
@@ -285,9 +289,9 @@ section#services .header {
 
 section#services .header {
   background-attachment: fixed;
-  background-color: #6195ff3d;
   background-blend-mode: screen;
   background-size: cover;
+  width: 100%;
   height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,6 +310,7 @@ section#services .header h1 {
   font-size: 2.5em;
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
+  word-spacing: 15;
 }
 
 section#services .header h1 .name1 {
@@ -394,5 +399,52 @@ section#services #service-content .content .icon-container:hover {
 
 section#services #service-content .content h1 {
   color: #6195ff;
+}
+
+section#services #why_choose_us {
+  min-width: 300px;
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5;
+  background: white;
+  -webkit-clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
+          clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
+}
+
+section#services #why_choose_us h1 {
+  font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #4884ff;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+section#services #why_choose_us .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+section#services #why_choose_us .feature i {
+  color: #4884ff;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 15px;
+  height: 16px;
+}
+
+section#services #why_choose_us .feature p {
+  color: #000000ab;
 }
 /*# sourceMappingURL=styles.css.map */

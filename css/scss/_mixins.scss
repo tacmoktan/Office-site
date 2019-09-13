@@ -1,16 +1,16 @@
 @mixin section {
 
     display:flex;
-    justify-content:center;
     flex-direction:column;
+    align-items:center;
     padding-top:$paddingTop - 40;
     margin-bottom:$marginBottom + 40;
 
     .header{
         background-attachment: fixed;
-        background-color:$blendColor;
         background-blend-mode:screen;
         background-size:cover;
+        width:100%;
         height:300px;
         display: flex;
         justify-content: center;
@@ -22,6 +22,8 @@
             font-size:2.5em;
             font-family:$navFont;
             text-transform:uppercase;
+            word-spacing: 15;
+
             .name1{
                 color:lighten($secondary, 6%);
             }
