@@ -181,7 +181,9 @@ section#services{
 section#contact{
 
     .header{
-        background-image:linear-gradient(-45deg, $primary, $secondary);
+        //background-image:linear-gradient(-45deg, $primary, $secondary);
+        background-image:url('../assets/section-img/bg3.jpg');
+        background-color:$blendColor;
     }
     @include section;
 
@@ -234,5 +236,62 @@ section#contact{
                 height:300px;
             }
         }
+    }
+}
+
+#footer{
+
+    background-image: linear-gradient(-45deg, #6195ff, #ffffff);
+    
+    #footer-top{
+        padding-top:$paddingTop;
+        display:flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        align-items: center;
+        
+        #footer_logo{   
+
+            img{
+                height:120px;
+            }
+        }
+
+        #social-medias{
+            min-width: 310px;
+            display: flex;
+            justify-content: space-around;
+
+            a{
+                background:$primary;
+                color: white;
+                padding: 15px;
+                border-radius: 50%;
+                
+                &:hover{
+                    background:darken($primary, 5%);
+                }
+            }
+        }
+    }
+
+    #footer-bottom{
+        text-align:center;
+        padding:30px 0;
+        word-spacing:5;
+        line-height:1.5;
+        h3{
+            font-family:$navFont;
+
+            .footer-name1{
+                color:darken($secondary, 5%);
+            }
+            .footer-name2{
+                color: darken($primary, 5%);
+            }
+
+        }
+
+        
     }
 }
