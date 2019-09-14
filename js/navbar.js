@@ -1,8 +1,12 @@
-const headerHeight = 120;
-
 //elements
 const header = document.querySelector('#header');
 const logoImg = document.querySelector('#logo a img');
+let anchors = document.querySelectorAll('#nav-links a');
+
+/* function onClick(index) {
+    anchors.forEach(a => a.setAttribute('class', ' '));
+    anchors[index].classList.add("active");
+} */
 
 window.onscroll = () => {
 
@@ -19,6 +23,24 @@ window.onscroll = () => {
         header.style.boxShadow = "none";
         logoImg.style.height = 100;
     }
+
+    //ONSCROLL active nav-link logic
+    if (pageYOffset < 661) {
+        anchors.forEach(a => a.setAttribute('class', ''));
+        anchors[0].setAttribute('class', 'active');
+    }
+    else if (pageYOffset >= 661 && pageYOffset < 1330) {
+        anchors.forEach(a => a.setAttribute('class', ''));
+        anchors[1].setAttribute('class', 'active');
+    }
+    else if (pageYOffset >= 1330 && pageYOffset < 3015) {
+        anchors.forEach(a => a.setAttribute('class', ''));
+        anchors[2].setAttribute('class', 'active');
+    }
+    else if (pageYOffset >= 3015) {
+        anchors.forEach(a => a.setAttribute('class', ''));
+        anchors[3].setAttribute('class', 'active');
+    }
 }
 
 //responsive navbar
@@ -26,9 +48,9 @@ const hamburger = document.querySelector('#hamburger');
 const drawer = document.querySelector('#drawer');
 
 window.onclick = event => {
-    if (event.target === hamburger) 
+    if (event.target === hamburger)
         drawer.style.right = 0;
-    else 
+    else
         drawer.style.right = -210;
 }
 
