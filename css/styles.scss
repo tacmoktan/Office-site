@@ -20,6 +20,7 @@ header{
     z-index:10;
 
     #navbar{
+        
         display:flex;
         align-items: center;
         width:87%;
@@ -47,6 +48,7 @@ header{
                 text-transform: uppercase;
                 font-size: 1.1em;
                 position:relative;
+                transition: color 0.2s linear;
 
                 &:after{
                     content:"";
@@ -61,6 +63,7 @@ header{
                 }
 
                 &:hover{
+                    color:$primary;
                     &:after{
                         width:100%;
                         bottom:-10px;
@@ -69,7 +72,9 @@ header{
             }
 
             .active{
+                color:$primary;
                 &:after{
+                    transition:bottom 0.2s linear;
                     width:100%;
                     bottom:-10px;
                 }
@@ -93,6 +98,9 @@ header{
 
         #drawer{
             
+            display:none;
+            @include mediaQuery($mediaQueryWidth){
+                
                 display:flex;
                 flex-direction: column;
                 position: absolute;
@@ -101,21 +109,22 @@ header{
                 height: 100vh;
                 background: $primary;
                 transition: right 0.3s ease-in;
-
-            a{
-                cursor:pointer;
-                border-bottom:1px solid;
-                font-family:$navFont;
-                text-transform:uppercase;
-                color:lighten(white, 5%);
-                text-decoration:none;
-                width: 150px;
-                text-align: center;
-                padding: 30px;
-
-                &:hover{
-                    background:darken($primary, 5%);
-                    color:darken(white, 5%);
+                
+                a{
+                    cursor:pointer;
+                    border-bottom:1px solid;
+                    font-family:$navFont;
+                    text-transform:uppercase;
+                    color:lighten(white, 5%);
+                    text-decoration:none;
+                    width: 150px;
+                    text-align: center;
+                    padding: 30px;
+                    
+                    &:hover{
+                        background:darken($primary, 5%);
+                        color:darken(white, 5%);
+                    }
                 }
             }
         }
@@ -193,6 +202,10 @@ section#services{
         background:white;
         clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
 
+        @include mediaQuery($mediaQueryWidth){
+            padding:7px;
+        }
+
         h1{
             font-size: 2.5em;
             font-family:$navFont;
@@ -230,6 +243,7 @@ section#contact{
         background-color:$blendColor;
     }
     @include section;
+    margin-bottom:0;
 
     #contact-content{
         width: 100%;
@@ -239,7 +253,7 @@ section#contact{
             display:flex;
             flex-wrap:wrap;
             justify-content: center;
-            margin: 70px 0;
+            margin: 30px 0;
             div{
                 padding: 35px 20px;
                 line-height: 1.5;
@@ -259,25 +273,32 @@ section#contact{
                     margin:5px 0;
                 }
 
-                p{
+                p, a{
                     color:#000000ab;
+                }
+
+                a{
+                    text-decoration:none;
                 }
             }
         }
 
-        h1{
-            font-size:2.5em;
-            font-family:$navFont;
-            width: 100%;
-            text-align: center;
-            color:$primary;
-        }
-
-        #map{
-            margin:30px 0;
-            iframe{
-                width:100%;
-                height:300px;
+        #visit_us{
+            margin:30px 0 60px 0;
+            h1{
+                font-size:2.5em;
+                font-family:$navFont;
+                width: 100%;
+                text-align: center;
+                color:$primary;
+                margin-bottom:20px;
+            }
+            
+            #map{
+                iframe{
+                    width:100%;
+                    height:300px;
+                }
             }
         }
     }
@@ -286,9 +307,8 @@ section#contact{
 #footer{
 
     background-image: linear-gradient(-45deg, #6195ff, #ffffff);
-    
+    padding:30px 0;
     #footer-top{
-        padding-top:$paddingTop;
         display:flex;
         justify-content: space-around;
         flex-wrap:wrap;
@@ -305,7 +325,7 @@ section#contact{
             min-width: 310px;
             display: flex;
             justify-content: space-around;
-
+            margin:20px 0;
             a{
                 background:$primary;
                 color: white;
@@ -321,7 +341,7 @@ section#contact{
 
     #footer-bottom{
         text-align:center;
-        padding:30px 0;
+        margin-top:30px;
         word-spacing:5;
         line-height:1.5;
         h3{
@@ -336,6 +356,5 @@ section#contact{
 
         }
 
-        
     }
 }

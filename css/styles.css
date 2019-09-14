@@ -60,6 +60,8 @@ header #navbar #nav-links a, header #navbar #nav-links .active {
   text-transform: uppercase;
   font-size: 1.1em;
   position: relative;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
@@ -75,12 +77,22 @@ header #navbar #nav-links a:after, header #navbar #nav-links .active:after {
   transition: width 0.2s ease-in, bottom 0.2s linear;
 }
 
+header #navbar #nav-links a:hover, header #navbar #nav-links .active:hover {
+  color: #6195ff;
+}
+
 header #navbar #nav-links a:hover:after, header #navbar #nav-links .active:hover:after {
   width: 100%;
   bottom: -10px;
 }
 
+header #navbar #nav-links .active {
+  color: #6195ff;
+}
+
 header #navbar #nav-links .active:after {
+  -webkit-transition: bottom 0.2s linear;
+  transition: bottom 0.2s linear;
   width: 100%;
   bottom: -10px;
 }
@@ -104,37 +116,41 @@ header #navbar i {
 }
 
 header #navbar #drawer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  right: -210px;
-  top: 0;
-  height: 100vh;
-  background: #6195ff;
-  -webkit-transition: right 0.3s ease-in;
-  transition: right 0.3s ease-in;
+  display: none;
 }
 
-header #navbar #drawer a {
-  cursor: pointer;
-  border-bottom: 1px solid;
-  font-family: "Roboto Condensed", sans-serif;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  width: 150px;
-  text-align: center;
-  padding: 30px;
-}
-
-header #navbar #drawer a:hover {
-  background: #4884ff;
-  color: #f2f2f2;
+@media screen and (max-width: 760px) {
+  header #navbar #drawer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: -210px;
+    top: 0;
+    height: 100vh;
+    background: #6195ff;
+    -webkit-transition: right 0.3s ease-in;
+    transition: right 0.3s ease-in;
+  }
+  header #navbar #drawer a {
+    cursor: pointer;
+    border-bottom: 1px solid;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    padding: 30px;
+  }
+  header #navbar #drawer a:hover {
+    background: #4884ff;
+    color: #f2f2f2;
+  }
 }
 
 section#home {
@@ -288,7 +304,7 @@ section#about #about-content .content .icon-container {
   font-size: 1.5em;
   position: absolute;
   top: -30;
-  left: 43%;
+  left: 41%;
   background: #7ba6ff;
   color: white;
   border-radius: 5px;
@@ -412,7 +428,7 @@ section#services #service-content .content .icon-container {
   font-size: 1.5em;
   position: absolute;
   top: -30;
-  left: 43%;
+  left: 41%;
   background: #7ba6ff;
   color: white;
   border-radius: 5px;
@@ -474,6 +490,12 @@ section#services #why_choose_us {
           clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 6%);
 }
 
+@media screen and (max-width: 760px) {
+  section#services #why_choose_us {
+    padding: 7px;
+  }
+}
+
 section#services #why_choose_us h1 {
   font-size: 2.5em;
   font-family: "Roboto Condensed", sans-serif;
@@ -515,6 +537,7 @@ section#contact {
           align-items: center;
   padding-top: 80px;
   margin-bottom: -80px;
+  margin-bottom: 0;
 }
 
 section#contact .header {
@@ -576,7 +599,7 @@ section#contact #contact-content .contact {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 70px 0;
+  margin: 30px 0;
 }
 
 section#contact #contact-content .contact div {
@@ -599,33 +622,38 @@ section#contact #contact-content .contact div h3 {
   margin: 5px 0;
 }
 
-section#contact #contact-content .contact div p {
+section#contact #contact-content .contact div p, section#contact #contact-content .contact div a {
   color: #000000ab;
 }
 
-section#contact #contact-content h1 {
+section#contact #contact-content .contact div a {
+  text-decoration: none;
+}
+
+section#contact #contact-content #visit_us {
+  margin: 30px 0 60px 0;
+}
+
+section#contact #contact-content #visit_us h1 {
   font-size: 2.5em;
   font-family: "Roboto Condensed", sans-serif;
   width: 100%;
   text-align: center;
   color: #6195ff;
+  margin-bottom: 20px;
 }
 
-section#contact #contact-content #map {
-  margin: 30px 0;
-}
-
-section#contact #contact-content #map iframe {
+section#contact #contact-content #visit_us #map iframe {
   width: 100%;
   height: 300px;
 }
 
 #footer {
   background-image: linear-gradient(-45deg, #6195ff, #ffffff);
+  padding: 30px 0;
 }
 
 #footer #footer-top {
-  padding-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,6 +677,7 @@ section#contact #contact-content #map iframe {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: 20px 0;
 }
 
 #footer #footer-top #social-medias a {
@@ -664,7 +693,7 @@ section#contact #contact-content #map iframe {
 
 #footer #footer-bottom {
   text-align: center;
-  padding: 30px 0;
+  margin-top: 30px;
   word-spacing: 5;
   line-height: 1.5;
 }

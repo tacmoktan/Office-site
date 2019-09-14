@@ -3,8 +3,8 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding-top:$paddingTop - 40;
-    margin-bottom:$marginBottom + 40;
+    padding-top:$paddingTop;       
+    margin-bottom:$marginBottom; 
 
     .header{
         background-attachment: fixed;
@@ -65,7 +65,7 @@
             font-size:1.5em;
             position: absolute;
             top: -30;
-            left: 43%;
+            left: 41%;
             background:lighten($primary,5%);
             color: white;
             border-radius:5px;

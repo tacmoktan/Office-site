@@ -7,9 +7,10 @@ $lightblack:#000000ab;
 $navFont:'Roboto Condensed', sans-serif;
 $contentFont : 'Ubuntu', sans-serif;
 $navbarHeight :120px;
+$smallNavbarHeight: 80px;
 
 //for scroll
-$paddingTop:$navbarHeight;
-$marginBottom: -$navbarHeight;
+$paddingTop:$smallNavbarHeight;
+$marginBottom: -$smallNavbarHeight;
 
 $mediaQueryWidth: 760px;
