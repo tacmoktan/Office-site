@@ -45,6 +45,6 @@ window.onclick = event => {
     if (event.target === hamburger)
         drawer.style.right = 0;
     else
-        drawer.style.right = -210;
+        drawer.style.right = -220;          //drawer's width
 }
 

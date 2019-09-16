@@ -100,31 +100,36 @@ header{
         #drawer{
             
             display:none;
+            
             @include mediaQuery($mediaQueryWidth){
                 
                 display:flex;
                 flex-direction: column;
                 position: absolute;
-                right: -210px;      //drawer's width 
+                right: -220px;      //drawer's width 
+                border-left: 10px solid #ffffffc7;
                 top: 0;
                 height: 100vh;
-                background: $primary;
+                background-image:linear-gradient(to right, #69bcb9, #6195ff);
                 transition: right 0.3s ease-in;
                 
                 a{
-                    cursor:pointer;
-                    border-bottom:1px solid;
-                    font-family:$navFont;
-                    text-transform:uppercase;
-                    color:lighten(white, 5%);
-                    text-decoration:none;
+                    cursor: pointer;
+                    border-bottom: 1px solid white;
+                    font-family: "Roboto Condensed", sans-serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: black;
+                    text-decoration: none;
                     width: 150px;
                     text-align: center;
                     padding: 30px;
-                    
+                    transition: background 0.15s linear;
+
                     &:hover{
                         background:darken($primary, 5%);
                         color:darken(white, 5%);
+                        font-style:italic;
                     }
                 }
             }
@@ -163,8 +168,8 @@ section#home{
             color:#45435f;
         }
         @include mediaQuery($mediaQueryWidth){
-            width:100%;
-            min-width:0;
+            width:70%;
+            min-width:310px;
             font-size:1.5em;
         }
     }
@@ -181,8 +186,8 @@ section#home{
         }
 
         @include mediaQuery($mediaQueryWidth){
-            width:100%;
-            min-width:0;
+            width:50%;
+            min-width:310px;
             font-size:1em;
         }
     }
