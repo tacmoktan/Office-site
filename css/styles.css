@@ -220,7 +220,7 @@ section#home .header h1 .name2 {
 }
 
 section#home h1, section#home h3 {
-  background-color: #6195ffeb;
+  background-color: #6195ff;
   -webkit-clip-path: polygon(5% 0, 45% 0%, 50% 10%, 55% 0%, 95% 0, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%);
           clip-path: polygon(5% 0, 45% 0%, 50% 10%, 55% 0%, 95% 0, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%);
   color: white;
@@ -230,11 +230,13 @@ section#home h1, section#home h3 {
   min-width: 615px;
   padding: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px;
-  box-shadow: 0px 0px 10px;
   font-variant-caps: petite-caps;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+section#home h1 i, section#home h3 i {
+  color: #2f2e41;
 }
 
 @media screen and (max-width: 760px) {
@@ -246,11 +248,15 @@ section#home h1, section#home h3 {
 }
 
 section#home h3 {
-  background-color: #2f2e41eb;
+  background-color: #2f2e41;
   margin-top: 40px;
   width: 35vw;
   min-width: 415px;
   font-size: 1.5em;
+}
+
+section#home h3 i {
+  color: #6195ff;
 }
 
 @media screen and (max-width: 760px) {

@@ -145,7 +145,7 @@ section#home{
     font-family:$navFont;
     h1, h3{
         //background-image:linear-gradient(to left, $primary, #6195ffab);
-        background-color:#6195ffeb;
+        background-color:$primary;
         clip-path: polygon(5% 0, 45% 0%, 50% 10%, 55% 0%, 95% 0, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%,  0% 20%);
         color: white;
         text-align: center;
@@ -154,11 +154,11 @@ section#home{
         min-width:615px;
         padding: 20px;
         border-radius: 5px;
-        -webkit-box-shadow: 0px 0px 10px;
-        box-shadow: 0px 0px 10px;
         font-variant-caps: petite-caps;
         box-sizing:border-box;
-
+        i{
+            color:#2f2e41;
+        }
         @include mediaQuery($mediaQueryWidth){
             width:100%;
             min-width:0;
@@ -168,11 +168,15 @@ section#home{
 
     h3{
         //background-image:linear-gradient(to left, $secondary, #fc3b06ab);
-        background-color:#2f2e41eb;
+        background-color:#2f2e41;
         margin-top:40px;
         width:35vw;
         min-width:415px;
         font-size:1.5em;
+        i{
+            color:$primary;
+        }
+
         @include mediaQuery($mediaQueryWidth){
             width:100%;
             min-width:0;
