@@ -3,18 +3,12 @@ const header = document.querySelector('#header');
 const logoImg = document.querySelector('#logo a img');
 let anchors = document.querySelectorAll('#nav-links a');
 
-/* function onClick(index) {
-    anchors.forEach(a => a.setAttribute('class', ' '));
-    anchors[index].classList.add("active");
-} */
-
 window.onscroll = () => {
 
     if (window.pageYOffset > 15) {
 
         header.style.background = "white";
-        header.style.boxShadow = "0px 1px 5px black";
-        header.style.transition = "box-shadow 0.15s ease-in";
+        header.style.boxShadow = "0px 1px 5px #0000006e";
         logoImg.style.height = 60;
 
     } else {
